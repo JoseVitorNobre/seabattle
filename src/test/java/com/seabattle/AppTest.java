@@ -16,8 +16,8 @@ public class AppTest {
         ArrayList<Integer> center = new ArrayList<Integer>(Arrays.asList(1,2));
         player.placeShip(new SmallShip(), Orientation.HORIZONTAL, center);
         assertThrows(ShipAlreadyExistException.class, ()->{
-            ArrayList<Integer> center2 = new ArrayList<Integer>(Arrays.asList(3,2));
-            player.placeShip(new LargeShip(), Orientation.VERTICAL, center2);
+            center.set(0, 3);
+            player.placeShip(new LargeShip(), Orientation.VERTICAL, center);
         });
     }
 

@@ -29,7 +29,7 @@ public class App /*  extends Application */ {
     public static void main(String[] args) {
         Player player = new Player();
         ArrayList<Integer> center = new ArrayList<Integer>(Arrays.asList(1, 3));
-        player.placeShip(new LargeShip(), Orientation.VERTICAL, center);
+        player.placeShip(new LargeShip(), Orientation.HORIZONTAL, center);
         System.out.println(player.getSeabattle());
     }
 

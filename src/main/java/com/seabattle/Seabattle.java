@@ -17,11 +17,15 @@ public class Seabattle {
 
     @Override
     public String toString(){
-        String seaMap = "";
+        String seaMap = "   1 2 3 4 5 6 7 8 9 10\n1  ";
+        int i = 2;
         for (ArrayList<Boolean> line : sea) {
             for (Boolean block : line) 
                 seaMap += block ? "1 " : "0 ";
-            seaMap += "\n";
+            if(i <= 10){
+                seaMap += i == 10 ? "\n" + i + " " : "\n" + i + "  ";
+                i++;
+            }
         }
         return seaMap;
     }
