@@ -3,6 +3,8 @@ package com.seabattle;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.seabattle.ships.IShip;
+
 import javafx.geometry.Orientation;
 
 public class Player {

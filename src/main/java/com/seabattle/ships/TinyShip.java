@@ -1,4 +1,4 @@
-package com.seabattle;
+package com.seabattle.ships;
 
 import java.util.ArrayList;
 

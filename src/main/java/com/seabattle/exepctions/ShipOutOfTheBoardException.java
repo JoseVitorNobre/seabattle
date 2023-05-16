@@ -1,4 +1,4 @@
-package com.seabattle;
+package com.seabattle.exepctions;
 
 public class ShipOutOfTheBoardException extends RuntimeException{
     

@@ -1,7 +1,9 @@
-package com.seabattle;
+package com.seabattle.ships;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import com.seabattle.exepctions.ShipOutOfTheBoardException;
 
 import javafx.geometry.Orientation;
 

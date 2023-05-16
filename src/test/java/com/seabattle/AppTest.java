@@ -7,6 +7,10 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
+import com.seabattle.exepctions.ShipAlreadyExistException;
+import com.seabattle.ships.LargeShip;
+import com.seabattle.ships.SmallShip;
+
 import javafx.geometry.Orientation;
 
 public class AppTest {

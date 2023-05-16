@@ -3,6 +3,8 @@ package com.seabattle;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.seabattle.ships.LargeShip;
+
 import javafx.application.Application;
 import javafx.geometry.Orientation;
 import javafx.scene.Scene;

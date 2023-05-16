@@ -2,6 +2,8 @@ package com.seabattle;
 
 import java.util.ArrayList;
 
+import com.seabattle.exepctions.ShipAlreadyExistException;
+
 public class Seabattle {
     private ArrayList<ArrayList<Boolean>> sea;
 
