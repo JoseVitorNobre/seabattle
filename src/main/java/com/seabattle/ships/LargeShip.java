@@ -3,6 +3,7 @@ package com.seabattle.ships;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.seabattle.Coordinates;
 import com.seabattle.exceptions.ShipOutOfTheBoardException;
 
 import javafx.geometry.Orientation;
@@ -10,9 +11,9 @@ import javafx.geometry.Orientation;
 public class LargeShip implements IShip {
 
     @Override
-    public ArrayList<Integer> getDirection(ArrayList<Integer> center, Orientation orientation) {
-        Integer X = center.get(0), Y = center.get(1);
-        ArrayList<Integer> location = new ArrayList<Integer>(center);
+    public ArrayList<Integer> getDirection(Coordinates center, Orientation orientation) {
+        Integer X = center.getX(), Y = center.getY();
+        ArrayList<Integer> location = new ArrayList<Integer>(Arrays.asList(center.getX(), center.getY()));
         if (orientation.equals(Orientation.VERTICAL) &&
                 ((X - 2) >= 0 && (X + 1) <= 10)) {
             location.addAll(Arrays.asList((X - 1), (Y)));

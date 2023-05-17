@@ -21,8 +21,8 @@ public class Seabattle {
         }
     }
 
-    private ArrayList<Integer> reduceToArray(ArrayList<Integer> value) {
-        return new ArrayList<Integer>(Arrays.asList((value.get(0) - 1), (value.get(1) - 1)));
+    private Coordinates reduceToArray(Coordinates value) {
+        return new Coordinates(value.getX() - 1, value.getY() - 1);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Seabattle {
         return seaMap;
     }
 
-    public void insertBoat(IShip ship, Orientation orientation, ArrayList<Integer> center) {
+    public void insertBoat(IShip ship, Orientation orientation, Coordinates center) {
         ArrayList<Integer> locations = ship.getDirection(reduceToArray(center), orientation);
         for (int i = 0; i + 1 < locations.size(); i += 2)
             if (this.sea.get(locations.get(i)).get(locations.get(i + 1)))

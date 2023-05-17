@@ -2,6 +2,8 @@ package com.seabattle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 import com.seabattle.ships.LargeShip;
 
@@ -30,8 +32,7 @@ public class App /*  extends Application */ {
 
     public static void main(String[] args) {
         Player player = new Player();
-        ArrayList<Integer> center = new ArrayList<Integer>(Arrays.asList(1, 3));
-        player.placeShip(new LargeShip(), Orientation.HORIZONTAL, center);
+        player.placeShip(new LargeShip(), Orientation.HORIZONTAL, new Coordinates(1, 3));
         System.out.println(player.getSeabattle());
     }
 

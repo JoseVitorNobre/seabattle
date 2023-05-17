@@ -19,20 +19,17 @@ public class AppTest {
     @Test
     public void thereIsAShipInThisLocationAlready() {
         Player player = new Player();
-        ArrayList<Integer> center = new ArrayList<Integer>(Arrays.asList(1, 2));
-        player.placeShip(new SmallShip(), Orientation.HORIZONTAL, center);
+        player.placeShip(new SmallShip(), Orientation.HORIZONTAL, new Coordinates(1, 2));
         assertThrows(ShipAlreadyExistException.class, () -> {
-            center.set(0, 3);
-            player.placeShip(new LargeShip(), Orientation.VERTICAL, center);
+            player.placeShip(new LargeShip(), Orientation.VERTICAL, new Coordinates(3, 2));
         });
     }
 
     @Test
     public void shipIsOutOfTheBoard() {
         Player player = new Player();
-        ArrayList<Integer> center = new ArrayList<Integer>(Arrays.asList(1, 1));
         assertThrows(ShipOutOfTheBoardException.class, () -> {
-            player.placeShip(new SmallShip(), Orientation.HORIZONTAL, center);
+            player.placeShip(new SmallShip(), Orientation.HORIZONTAL, new Coordinates(1, 1));
         });
     }
 
