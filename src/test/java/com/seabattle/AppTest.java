@@ -3,9 +3,6 @@ package com.seabattle;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import org.junit.Test;
 
 import com.seabattle.exceptions.ShipAlreadyExistException;
@@ -35,9 +32,16 @@ public class AppTest {
         });
     }
 
+    @Test
+    public void shipIsFlippable() {
+        Player player = new Player();
+        player.placeShip(new ShipLocation(new SmallShip(), Orientation.HORIZONTAL, new Coordinates(2, 2)));
+        assertTrue(player.flipShip(new Coordinates(2, 2)));
+    }
+
     // @Test
-    // public void shipIsFlippable() {
-        
+    // public void flippingAShipWillConflictWithAnotherShip() {
+
     // }
 
     // @Test

@@ -8,6 +8,8 @@ import java.util.List;
 import com.seabattle.locationArragment.Coordinates;
 import com.seabattle.locationArragment.ShipLocation;
 import com.seabattle.ships.LargeShip;
+import com.seabattle.ships.MediumShip;
+import com.seabattle.ships.SmallShip;
 
 import javafx.application.Application;
 import javafx.geometry.Orientation;
@@ -34,7 +36,8 @@ public class App /*  extends Application */ {
 
     public static void main(String[] args) {
         Player player = new Player();
-        player.placeShip(new ShipLocation(new LargeShip(), Orientation.HORIZONTAL, new Coordinates(1, 3)));
+        player.placeShip(new ShipLocation(new LargeShip(), Orientation.HORIZONTAL, new Coordinates(3, 3)));
+        player.flipShip(new Coordinates(3, 3));
         System.out.println(player.getSeabattle());
     }
 

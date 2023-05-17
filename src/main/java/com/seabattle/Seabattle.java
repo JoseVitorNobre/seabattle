@@ -1,19 +1,18 @@
 package com.seabattle;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import com.seabattle.exceptions.ShipAlreadyExistException;
+import com.seabattle.locationArragment.Coordinates;
 import com.seabattle.locationArragment.ShipLocation;
-import com.seabattle.ships.IShip;
-
-import javafx.geometry.Orientation;
 
 public class Seabattle {
     private ArrayList<ArrayList<Boolean>> sea;
+    private ArrayList<ShipLocation> shipPositions;
 
     public Seabattle() {
         this.sea = new ArrayList<ArrayList<Boolean>>();
+        this.shipPositions = new ArrayList<ShipLocation>();
         for (int i = 0; i < 10; i++) {
             ArrayList<Boolean> line = new ArrayList<Boolean>();
             for (int j = 0; j < 10; j++)
@@ -38,8 +37,9 @@ public class Seabattle {
         return seaMap;
     }
 
-    public void insertBoat(ShipLocation shipLocation) {
+    public void insertShip(ShipLocation shipLocation) {
         ArrayList<Integer> locations = shipLocation.getLocations();
+        this.shipPositions.add(shipLocation);
         for (int i = 0; i + 1 < locations.size(); i += 2)
             if (this.sea.get(locations.get(i)).get(locations.get(i + 1)))
                 throw new ShipAlreadyExistException();
@@ -47,4 +47,23 @@ public class Seabattle {
                 this.sea.get(locations.get(i)).set(locations.get(i + 1), true);
     }
 
+    public boolean turnShip(Coordinates coordinates){
+        int X = coordinates.getX(), Y = coordinates.getY();
+        for (ShipLocation shipPosition : this.shipPositions) {
+            if(shipPosition.getCenter().isTheSamePosition(X, Y)){
+                this.shipPositions.remove(shipPosition);
+                eraseLocation(shipPosition.getLocations());
+                shipPosition.changeDirections();
+                insertShip(shipPosition);
+                this.shipPositions.add(shipPosition);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void eraseLocation(ArrayList<Integer> locations){
+        for (int i = 0; i + 1 < locations.size(); i += 2)
+            this.sea.get(locations.get(i)).set(locations.get(i + 1), false);
+    }
 }
