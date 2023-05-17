@@ -1,4 +1,4 @@
-package com.seabattle;
+package com.seabattle.locationArragment;
 
 public class Coordinates {
     private int X;

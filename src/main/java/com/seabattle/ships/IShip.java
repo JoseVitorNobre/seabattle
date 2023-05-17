@@ -2,7 +2,7 @@ package com.seabattle.ships;
 
 import java.util.ArrayList;
 
-import com.seabattle.Coordinates;
+import com.seabattle.locationArragment.Coordinates;
 
 import javafx.geometry.Orientation;
 

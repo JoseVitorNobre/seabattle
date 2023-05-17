@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+import com.seabattle.locationArragment.Coordinates;
+import com.seabattle.locationArragment.ShipLocation;
 import com.seabattle.ships.LargeShip;
 
 import javafx.application.Application;
@@ -32,7 +34,7 @@ public class App /*  extends Application */ {
 
     public static void main(String[] args) {
         Player player = new Player();
-        player.placeShip(new LargeShip(), Orientation.HORIZONTAL, new Coordinates(1, 3));
+        player.placeShip(new ShipLocation(new LargeShip(), Orientation.HORIZONTAL, new Coordinates(1, 3)));
         System.out.println(player.getSeabattle());
     }
 

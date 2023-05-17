@@ -3,8 +3,8 @@ package com.seabattle.ships;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.seabattle.Coordinates;
 import com.seabattle.exceptions.ShipOutOfTheBoardException;
+import com.seabattle.locationArragment.Coordinates;
 
 import javafx.geometry.Orientation;
 

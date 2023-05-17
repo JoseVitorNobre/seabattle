@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.seabattle.exceptions.ShipAlreadyExistException;
+import com.seabattle.locationArragment.ShipLocation;
 import com.seabattle.ships.IShip;
 
 import javafx.geometry.Orientation;
@@ -21,9 +22,6 @@ public class Seabattle {
         }
     }
 
-    private Coordinates reduceToArray(Coordinates value) {
-        return new Coordinates(value.getX() - 1, value.getY() - 1);
-    }
 
     @Override
     public String toString() {
@@ -40,8 +38,8 @@ public class Seabattle {
         return seaMap;
     }
 
-    public void insertBoat(IShip ship, Orientation orientation, Coordinates center) {
-        ArrayList<Integer> locations = ship.getDirection(reduceToArray(center), orientation);
+    public void insertBoat(ShipLocation shipLocation) {
+        ArrayList<Integer> locations = shipLocation.getLocations();
         for (int i = 0; i + 1 < locations.size(); i += 2)
             if (this.sea.get(locations.get(i)).get(locations.get(i + 1)))
                 throw new ShipAlreadyExistException();
