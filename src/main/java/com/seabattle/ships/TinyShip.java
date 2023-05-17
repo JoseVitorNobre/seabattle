@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import javafx.geometry.Orientation;
 
-public class TinyShip implements IShip{
+public class TinyShip implements IShip {
 
     @Override
     public ArrayList<Integer> getDirection(ArrayList<Integer> center, Orientation orientation) {
