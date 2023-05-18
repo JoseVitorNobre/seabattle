@@ -30,25 +30,60 @@ O sistema em questão é sobre Batalha Naval, um jogo estratégico baseado em tu
      </tr>
 </table>
           
-          
 
 2.   Como jogador, quero poder indicar a posição aonde quero atacar nas casas do tabuleiro do jogo Batalha Naval para tentar afundar os navios inimigos.
-     - Dado -  que sou um jogador
-     - Quando - é a minha vez de atacar
-     - Então - devo poder selecionar uma casa no tabuleiro para realizar o ataque
+
+<table>
+     <tr>
+          <td> Dado </td>
+          <td> Que eu sou jogador </td>
+     </tr>
+     <tr>
+          <td> Quando </td>
+          <td> È a minha vez de atacar </td>
+     </tr>
+      <tr>
+          <td> Então </td>
+          <td>  devo poder selecionar uma casa no tabuleiro para realizar o ataque </td>
+     </tr>
+</table>
+
 
 3.   Como jogador, quero receber informações sobre o resultado dos meus ataques no jogo Batalha Naval, para saber se acertei um navio inimigo ou se errei o alvo.
-     - Dado - que sou um jogador
-     - Quando - realizo um ataque em uma casa do tabuleiro
-     - Então - devo receber informações sobre o resultado do ataque, indicando se acertei um navio inimigo ou se errei o alvo
+
+<table>
+     <tr>
+          <td> Dado </td>
+          <td> Que eu sou jogador </td>
+     </tr>
+     <tr>
+          <td> Quando </td>
+          <td> Realizo um ataque em uma casa do tabuleiro </td>
+     </tr>
+      <tr>
+          <td> Então </td>
+          <td> Devo receber informações sobre o resultado do ataque, indicando se acertei um navio inimigo ou se errei o alvo </td>
+     </tr>
+</table>
 
 
 4.   Como jogador, quero ser notificado quando afundar todos os navios inimigos no jogo Batalha Naval, para saber que venci a partida.
-     - Dado - que sou um jogador
-     - Quando - afundo todos os navios inimigos
-     - Então - devo receber uma notificação clara e evidente de que venci a partida
-      
-      
+
+<table>
+     <tr>
+          <td> Dado </td>
+          <td> Que eu sou jogador </td>
+     </tr>
+     <tr>
+          <td> Quando </td>
+          <td> Afundo todos os navios inimigos </td>
+     </tr>
+      <tr>
+          <td> Então </td>
+          <td> devo receber uma notificação clara e evidente de que venci a partida </td>
+     </tr>
+</table>
+
 
 #### 📋 Conceitos Implementados
 - Injeção de Dependencia
