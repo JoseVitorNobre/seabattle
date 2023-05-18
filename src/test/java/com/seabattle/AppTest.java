@@ -40,8 +40,9 @@ public class AppTest {
         
     // }
 
-    // @Test
-    // public void locationAlreadyGuessed(){
+    @Test
+    public void locationAlreadyGuessed(){
+        Player player = new Player();
         
-    // }
+    }
 }
