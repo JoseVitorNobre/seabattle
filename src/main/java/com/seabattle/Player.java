@@ -1,5 +1,6 @@
 package com.seabattle;
 
+import com.seabattle.locationArragment.Coordinates;
 import com.seabattle.locationArragment.ShipLocation;
 
 public class Player {
@@ -10,7 +11,11 @@ public class Player {
     }
 
     public void placeShip(ShipLocation shipLocation) {
-        this.seabattle.insertBoat(shipLocation);
+        this.seabattle.insertShip(shipLocation);
+    }
+
+    public boolean flipShip(Coordinates coordinates){
+        return this.seabattle.turnShip(coordinates);
     }
 
     public Seabattle getSeabattle() {

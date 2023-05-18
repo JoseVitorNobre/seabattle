@@ -9,18 +9,14 @@ import javafx.geometry.Orientation;
 public class ShipLocation {
     private IShip ship;
     private Coordinates center;
-    private ArrayList<Integer> locations;
+    private Orientation orientation;
     
     public ShipLocation(IShip ship, Orientation orientation, Coordinates center) {
         this.ship = ship;
-        this.center = reduceToArray(center);
-        this.locations = this.ship.getDirection(this.center, orientation);
+        this.center = center;
+        this.orientation = orientation;
     }
     
-    private Coordinates reduceToArray(Coordinates value) {
-        return new Coordinates(value.getX() - 1, value.getY() - 1);
-    }
-
     public IShip getShip() {
         return ship;
     }
@@ -28,8 +24,17 @@ public class ShipLocation {
         return center;
     }
     public ArrayList<Integer> getLocations() {
-        return locations;
+        return this.ship.getDirection(this.center, this.orientation);
     }
 
-
+    public void changeDirections(){
+        switch(this.orientation) {
+            case HORIZONTAL:
+                this.orientation = Orientation.VERTICAL;
+                break;
+            case VERTICAL:
+                this.orientation = Orientation.HORIZONTAL;
+                break;
+        }
+    }
 }

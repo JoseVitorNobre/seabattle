@@ -49,7 +49,7 @@ public class Seabattle {
 
     public void attackPosition(Coordinates coordinate){
         Integer position = this.sea.get(coordinate.getX()).get(coordinate.getY());
-
+        
         if (position == 0) {
             this.sea.get(coordinate.getX()).add(coordinate.getY(), 1);
         } else {
