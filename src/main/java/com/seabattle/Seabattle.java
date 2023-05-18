@@ -2,6 +2,7 @@ package com.seabattle;
 
 import java.util.ArrayList;
 
+import com.seabattle.exceptions.PositionGuessedException;
 import com.seabattle.exceptions.ShipAlreadyExistException;
 import com.seabattle.locationArragment.Coordinates;
 import com.seabattle.locationArragment.ShipLocation;
@@ -98,9 +99,10 @@ public class Seabattle {
 
         if (position == 0) {
             this.sea.get(coordinate.getX()).add(coordinate.getY(), 1);
+        } else if (position == 2) {
+            this.sea.get(coordinate.getX()).add(coordinate.getY(), 3);
         } else {
-            // create here the code to shoot a ship;
+            throw new PositionGuessedException();
         }
     }
-
 }

@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import com.seabattle.exceptions.PositionGuessedException;
 import com.seabattle.exceptions.ShipAlreadyExistException;
 import com.seabattle.exceptions.ShipOutOfTheBoardException;
 import com.seabattle.locationArragment.Coordinates;
@@ -53,6 +54,11 @@ public class AppTest {
     @Test
     public void locationAlreadyGuessed(){
         Player player = new Player();
-        
+
+        player.getSeabattle().attackPosition(new Coordinates(4, 6));
+
+        assertThrows(PositionGuessedException.class, ()-> {
+            player.getSeabattle().attackPosition(new Coordinates(4, 6));
+        });
     }
 }
