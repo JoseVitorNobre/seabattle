@@ -14,7 +14,7 @@ O sistema em questão é sobre Batalha Naval, um jogo estratégico baseado em tu
 ## ✔️ User Storys e BDDs
 
 - Como jogador, quero poder posicionar meus navios no tabuleiro do jogo Batalha Naval para começar a jogar.
-Dado - que sou um jogador
+-- Dado - que sou um jogador
 Quando - estou na tela de posicionamento dos navios
 Então - devo poder selecionar meus navios e colocá-los no tabuleiro
 
