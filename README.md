@@ -93,9 +93,7 @@ O sistema em questão é sobre Batalha Naval, um jogo estratégico baseado em tu
 - JDK 17
 - Maven
 
-## 📸 Autores
-<table>
-  <tr>
+
     
 ## 📸 Autores
 <table>
