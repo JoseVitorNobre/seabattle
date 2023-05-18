@@ -38,6 +38,7 @@ public class App /*  extends Application */ {
         Player player = new Player();
         player.placeShip(new ShipLocation(new LargeShip(), Orientation.HORIZONTAL, new Coordinates(3, 3)));
         player.flipShip(new Coordinates(3, 3));
+
         System.out.println(player.getSeabattle());
     }
 

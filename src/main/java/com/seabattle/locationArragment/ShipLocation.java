@@ -27,7 +27,7 @@ public class ShipLocation {
         return this.ship.getDirection(this.center, this.orientation);
     }
 
-    public void changeDirections(){
+    public ShipLocation changeDirections(){
         switch(this.orientation) {
             case HORIZONTAL:
                 this.orientation = Orientation.VERTICAL;
@@ -36,5 +36,6 @@ public class ShipLocation {
                 this.orientation = Orientation.HORIZONTAL;
                 break;
         }
+        return this;
     }
 }

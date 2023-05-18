@@ -51,6 +51,9 @@ public class Seabattle {
         int X = coordinates.getX(), Y = coordinates.getY();
         for (ShipLocation shipPosition : this.shipPositions) {
             if(shipPosition.getCenter().isTheSamePosition(X, Y)){
+                if(hasExistingShip(shipPosition.changeDirections().getLocations(), coordinates)){
+                    throw new ShipAlreadyExistException();
+                }
                 this.shipPositions.remove(shipPosition);
                 eraseLocation(shipPosition.getLocations());
                 shipPosition.changeDirections();
@@ -65,5 +68,15 @@ public class Seabattle {
     private void eraseLocation(ArrayList<Integer> locations){
         for (int i = 0; i + 1 < locations.size(); i += 2)
             this.sea.get(locations.get(i)).set(locations.get(i + 1), false);
+    }
+
+    private boolean hasExistingShip(ArrayList<Integer> locations, Coordinates center){
+        for (int i = 0; i + 1 < locations.size(); i += 2){
+            if(center.getX() == locations.get(i) && center.getY() == locations.get(i+1))
+                continue;
+            if (this.sea.get(locations.get(i)).get(locations.get(i + 1)))
+                return true;
+        }
+        return false;
     }
 }
