@@ -14,12 +14,15 @@ public class SmallShip implements IShip {
     public ArrayList<Integer> getDirection(Coordinates center, Orientation orientation) {
         Integer X = center.getX(), Y = center.getY();
         ArrayList<Integer> location = new ArrayList<Integer>(Arrays.asList(center.getX(), center.getY()));
-        if (orientation.equals(Orientation.VERTICAL) && (X - 1) >= 0)
+
+        if (orientation.equals(Orientation.VERTICAL) && (X - 1) >= 0){
             location.addAll(Arrays.asList((X - 1), Y));
-        else if (orientation.equals(Orientation.HORIZONTAL) && (Y - 1) >= 0)
+        }else if (orientation.equals(Orientation.HORIZONTAL) && (Y - 1) >= 0){
             location.addAll(Arrays.asList(X, (Y - 1)));
-        else
+        }else{
             throw new ShipOutOfTheBoardException();
+        }
+        
         return location;
     }
 

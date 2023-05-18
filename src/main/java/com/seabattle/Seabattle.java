@@ -1,14 +1,10 @@
 package com.seabattle;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import com.seabattle.exceptions.ShipAlreadyExistException;
 import com.seabattle.locationArragment.Coordinates;
 import com.seabattle.locationArragment.ShipLocation;
-import com.seabattle.ships.IShip;
-
-import javafx.geometry.Orientation;
 
 public class Seabattle {
     private ArrayList<ArrayList<Integer>> sea;
@@ -87,7 +83,7 @@ public class Seabattle {
             if(center.getX() == locations.get(i) && center.getY() == locations.get(i+1)){
                 continue;
             }
-            
+
             if (this.sea.get(locations.get(i)).get(locations.get(i + 1)) == 0){
                 return true;
             }

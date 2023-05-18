@@ -32,10 +32,12 @@ public class ShipLocation {
             case HORIZONTAL:
                 this.orientation = Orientation.VERTICAL;
                 break;
+                
             case VERTICAL:
                 this.orientation = Orientation.HORIZONTAL;
                 break;
         }
+
         return this;
     }
 }
