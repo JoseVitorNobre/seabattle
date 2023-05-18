@@ -13,25 +13,26 @@ O sistema em questão é sobre Batalha Naval, um jogo estratégico baseado em tu
 
 ## ✔️ User Storys e BDDs
 
-- Como jogador, quero poder posicionar meus navios no tabuleiro do jogo Batalha Naval para começar a jogar.
--- Dado - que sou um jogador
-Quando - estou na tela de posicionamento dos navios
-Então - devo poder selecionar meus navios e colocá-los no tabuleiro
+1.   Como jogador, quero poder posicionar meus navios no tabuleiro do jogo Batalha Naval para começar a jogar.
+     - Dado - que sou um jogador 
+     - Quando - estou na tela de posicionamento dos navios
+     - Então - devo poder selecionar meus navios e colocá-los no tabuleiro
+      
 
-- Como jogador, quero poder indicar a posição aonde quero atacar nas casas do tabuleiro do jogo Batalha Naval para tentar afundar os navios inimigos.
-Dado -  que sou um jogador
-Quando - é a minha vez de atacar
-Então devo poder selecionar uma casa no tabuleiro para realizar o ataque
+2. Como jogador, quero poder indicar a posição aonde quero atacar nas casas do tabuleiro do jogo Batalha Naval para tentar afundar os navios inimigos.
+- Dado -  que sou um jogador
+- Quando - é a minha vez de atacar
+- Então devo poder selecionar uma casa no tabuleiro para realizar o ataque
 
-- Como jogador, quero receber informações sobre o resultado dos meus ataques no jogo Batalha Naval, para saber se acertei um navio inimigo ou se errei o alvo.
-Dado que sou um jogador
-Quando realizo um ataque em uma casa do tabuleiro
-Então devo receber informações sobre o resultado do ataque, indicando se acertei um navio inimigo ou se errei o alvo
+3. Como jogador, quero receber informações sobre o resultado dos meus ataques no jogo Batalha Naval, para saber se acertei um navio inimigo ou se errei o alvo.
+- Dado que sou um jogador
+- Quando realizo um ataque em uma casa do tabuleiro
+- Então devo receber informações sobre o resultado do ataque, indicando se acertei um navio inimigo ou se errei o alvo
 
-- Como jogador, quero ser notificado quando afundar todos os navios inimigos no jogo Batalha Naval, para saber que venci a partida.
-Dado que sou um jogador
-Quando afundo todos os navios inimigos
-Então devo receber uma notificação clara e evidente de que venci a partida
+4. Como jogador, quero ser notificado quando afundar todos os navios inimigos no jogo Batalha Naval, para saber que venci a partida.
+- Dado que sou um jogador
+- Quando afundo todos os navios inimigos
+- Então devo receber uma notificação clara e evidente de que venci a partida
 
 #### 📋 Conceitos Implementados
 - Injeção de Dependencia
