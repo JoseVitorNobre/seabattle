@@ -14,9 +14,23 @@ O sistema em questão é sobre Batalha Naval, um jogo estratégico baseado em tu
 ## ✔️ User Storys e BDDs
 
 1.   Como jogador, quero poder posicionar meus navios no tabuleiro do jogo Batalha Naval para começar a jogar.
-     - Dado - que sou um jogador 
-     - Quando - estou na tela de posicionamento dos navios
-     - Então - devo poder selecionar meus navios e colocá-los no tabuleiro
+
+<table>
+     <tr>
+          <td> Dado </td>
+          <td> Que eu sou jogador </td>
+     </tr>
+     <tr>
+          <td> Quando </td>
+          <td> Estou na tela de posicionamento dos navios </td>
+     </tr>
+      <tr>
+          <td> Então </td>
+          <td> Devo poder selecionar meus navios e colocá-los no tabuleiro </td>
+     </tr>
+</table>
+          
+          
 
 2.   Como jogador, quero poder indicar a posição aonde quero atacar nas casas do tabuleiro do jogo Batalha Naval para tentar afundar os navios inimigos.
      - Dado -  que sou um jogador
