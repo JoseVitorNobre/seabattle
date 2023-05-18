@@ -100,12 +100,6 @@ O sistema em questão é sobre Batalha Naval, um jogo estratégico baseado em tu
 ## 📸 Autores
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/danielft2"><img src="https://avatars.githubusercontent.com/u/73781042?v=4" width="100px;" alt="Daniel Almeida"/><br /><sub><b>Daniel Almeida</b></sub></a><br /><a href="https://github.com/danielft2" title="FrontEnd">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="20px" />
-    </a></td>
-    <td align="center"><a href="https://github.com/VictorM-Coder"><img src="https://avatars.githubusercontent.com/u/84944695?v=4" width="100px;" alt="Victor Martins"/><br /><sub><b>Victor Martins</b></sub></a><br /><a href="https://github.com/VictorM-Coder" title="BackEnd">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="20px"/>
-    </a></td>
      <td align="center"><a href="https://github.com/JoseVitorNobre"><img src="https://avatars.githubusercontent.com/u/62249331?v=4" width="100px;" alt="José Vitor"/><br /><sub><b>José Vitor</b></sub></a><br /><a href="https://github.com/JoseVitorNobre" title="BackEnd">
      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="20px"/>
      </a></td>
