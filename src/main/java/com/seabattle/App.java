@@ -36,10 +36,10 @@ public class App /*  extends Application */ {
 
     public static void main(String[] args) {
         Player player = new Player();
-        player.placeShip(new ShipLocation(new LargeShip(), Orientation.HORIZONTAL, new Coordinates(3, 3)));
+        player.placeShip(new ShipLocation(new SmallShip(), Orientation.HORIZONTAL, new Coordinates(3, 3)));
         player.flipShip(new Coordinates(3, 3));
-
         System.out.println(player.getSeabattle());
+
     }
 
 }

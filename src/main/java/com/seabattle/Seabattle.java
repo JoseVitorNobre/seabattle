@@ -12,6 +12,7 @@ public class Seabattle {
 
     public Seabattle() {
         this.sea = new ArrayList<ArrayList<Integer>>();
+        this.shipPositions = new ArrayList<ShipLocation>();
 
         for (int i = 0; i < 10; i++) {
             ArrayList<Integer> line = new ArrayList<Integer>();
@@ -20,22 +21,22 @@ public class Seabattle {
         }
     }
 
-    /*
-     * @Override
-     * public String toString() {
-     * String seaMap = "   1 2 3 4 5 6 7 8 9 10\n1  ";
-     * int i = 2;
-     * for (ArrayList<Integer> line : sea) {
-     * for (Integer block : line)
-     * seaMap += block ? "1 " : "0 ";
-     * if (i <= 10) {
-     * seaMap += i == 10 ? "\n" + i + " " : "\n" + i + "  ";
-     * i++;
-     * }
-     * }
-     * return seaMap;
-     * }
-     */
+    
+     /* @Override
+    public String toString() {
+        String seaMap = "   1 2 3 4 5 6 7 8 9 10\n1  ";
+        int i = 2;
+
+        for (ArrayList<Integer> line : sea) {
+            for (Integer block : line) seaMap += block + " ";
+            if (i <= 10) {
+                seaMap += i == 10 ? "\n" + i + " " : "\n" + i + "  ";
+                i++;
+            }
+        }
+        return seaMap;
+    } */
+    
 
     public void insertShip(ShipLocation shipLocation) {
         ArrayList<Integer> locations = shipLocation.getLocations();
@@ -53,17 +54,18 @@ public class Seabattle {
     public boolean turnShip(Coordinates coordinates) {
         int X = coordinates.getX(), Y = coordinates.getY();
 
-        for (ShipLocation shipPosition : this.shipPositions) {
-            if(shipPosition.getCenter().isTheSamePosition(X, Y)){
-                if(hasExistingShip(shipPosition.changeDirections().getLocations(), coordinates)){
+        for (int i = 0; i < this.shipPositions.size();i++) {
+            if(this.shipPositions.get(i).getCenter().isTheSamePosition(X, Y)){
+                if(hasExistingShip(this.shipPositions.get(i).changeDirections().getLocations(), coordinates)){
                     throw new ShipAlreadyExistException();
                 }
-                this.shipPositions.remove(shipPosition);
-                eraseLocation(shipPosition.getLocations());
-                
-                shipPosition.changeDirections();
+                ShipLocation shipPosition = new ShipLocation(this.shipPositions.get(i).getShip(), 
+                                                             this.shipPositions.get(i).getOrientation(), 
+                                                             coordinates);
+
+                eraseLocation(this.shipPositions.get(i).changeDirections().getLocations());
+                this.shipPositions.remove(i);
                 insertShip(shipPosition);
-                this.shipPositions.add(shipPosition);
 
                 return true;
             }
@@ -84,7 +86,7 @@ public class Seabattle {
                 continue;
             }
 
-            if (this.sea.get(locations.get(i)).get(locations.get(i + 1)) == 0){
+            if (this.sea.get(locations.get(i)).get(locations.get(i + 1)) == 2){
                 return true;
             }
         }
