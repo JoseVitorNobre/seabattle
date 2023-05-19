@@ -55,10 +55,10 @@ public class AppTest {
     public void locationAlreadyGuessed(){
         Player player = new Player();
 
-        player.getSeabattle().attackPosition(new Coordinates(4, 6));
+        player.attackArea(new Coordinates(4, 6));
 
         assertThrows(PositionGuessedException.class, ()-> {
-            player.getSeabattle().attackPosition(new Coordinates(4, 6));
+            player.attackArea(new Coordinates(4, 6));
         });
     }
 }
