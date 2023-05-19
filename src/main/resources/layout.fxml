@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="648.0" prefWidth="1296.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seabattle.components.Board">
+   <children>
+      <ImageView fx:id="waterBlock1" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock2" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock3" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock4" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock5" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock6" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock7" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock8" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock9" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock10" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock11" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock12" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock13" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock14" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock15" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock16" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock17" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock18" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock19" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock20" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock21" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock22" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock23" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock24" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock25" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock26" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock27" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock28" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock29" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock30" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock31" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock32" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock33" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock34" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock35" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock36" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock37" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock38" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock39" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock40" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock41" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock42" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock43" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock44" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock45" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock46" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock47" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock48" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock49" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock50" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock51" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock52" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock53" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock54" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock55" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock56" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock57" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock58" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock59" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock60" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock61" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock62" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock63" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock64" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock65" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock66" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock67" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock68" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock69" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock70" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock71" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock72" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock73" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock74" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock75" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock76" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock77" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock78" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock79" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock80" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock81" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock82" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock83" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock84" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock85" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock86" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock87" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock88" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock89" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock90" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock91" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock92" fitHeight="30.0" fitWidth="30.0" layoutX="145.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock93" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock94" fitHeight="30.0" fitWidth="30.0" layoutX="225.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock95" fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock96" fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock97" fitHeight="30.0" fitWidth="30.0" layoutX="345.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock98" fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock99" fitHeight="30.0" fitWidth="30.0" layoutX="425.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waterBlock100" fitHeight="30.0" fitWidth="30.0" layoutX="465.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/water-bloc.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
