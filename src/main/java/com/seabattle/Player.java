@@ -22,5 +22,8 @@ public class Player {
         return seabattle;
     }
 
+    public void attackArea(Coordinates coordinates){
+        this.seabattle.attackPosition(coordinates);
+    }
     
 }
