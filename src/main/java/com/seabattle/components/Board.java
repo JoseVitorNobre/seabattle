@@ -307,6 +307,9 @@ public class Board {
     @FXML
     private ImageView waterBlock99;
 
+    @FXML
+    private ImageView smallShip;
+
     private ArrayList<ImageView> waterBlocks;
 
     public Board() {
