@@ -1,11 +1,35 @@
 package com.seabattle.components;
 
-import java.util.ArrayList;
+import com.seabattle.Seabattle;
+import com.seabattle.exceptions.ShipAlreadyExistException;
+import com.seabattle.exceptions.ShipOutOfTheBoardException;
+import com.seabattle.locationArragment.Coordinates;
+import com.seabattle.locationArragment.ShipLocation;
+import com.seabattle.ships.IShip;
+import com.seabattle.ships.LargeShip;
+import com.seabattle.ships.MediumShip;
+import com.seabattle.ships.SmallShip;
+import com.seabattle.ships.TinyShip;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Orientation;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 public class Board {
+
+    @FXML
+    private ImageView largeShip;
+
+    @FXML
+    private ImageView mediumShip;
+
+    @FXML
+    private ImageView smallShip;
+
+    @FXML
+    private ImageView tinyShip;
 
     @FXML
     private ImageView waterBlock1;
@@ -307,11 +331,63 @@ public class Board {
     @FXML
     private ImageView waterBlock99;
 
-    private ArrayList<ImageView> waterBlocks;
+    private Seabattle seabattle = new Seabattle();
 
-    public Board() {
-        this.waterBlocks = new ArrayList<ImageView>();
+    private String actionImplication;
+
+    @FXML
+    void chooseAction(MouseEvent event) {
+        this.actionImplication = event.getPickResult().getIntersectedNode().getId();
+        // System.out.println(event.getPickResult().getIntersectedNode().getId());
     }
 
-    
+    @FXML
+    void action(MouseEvent event) {
+        ImageView clickedImageView = (ImageView) event.getSource();
+        String clickedImageId = clickedImageView.getId();
+        int number = Integer.parseInt(clickedImageId.substring(10));
+        Integer positionX = ((number / 10) % 10) + 1;
+        if (positionX == 0)
+            positionX = 1;
+        Integer positionY = number % 10;
+        if (positionY == 0)
+            positionY = 10;
+        // System.out.println("X: " + positionX + " Y: "+ positionY);
+        Image action;
+        try {
+            IShip ship;
+            switch (actionImplication) {
+                case "tinyShip":
+                    ship = new TinyShip();
+                    action = new Image("imgs/TinyShip.png");
+                    break;
+                case "smallShip":
+                    ship = new SmallShip();
+                    action = new Image("imgs/CimaBaixo.png");
+                    break;
+                case "mediumShip":
+                    ship = new MediumShip();
+                    action = new Image("imgs/Meio.png");
+                    break;
+                case "largeShip":
+                    ship = new LargeShip();
+                    action = new Image("imgs/Meio.png");
+                    break;
+                default:
+                    ship = null;
+                    action = null;
+                    break;
+            }
+            Coordinates coordinates = new Coordinates(positionX, positionY);
+            ShipLocation shipLocation = new ShipLocation(ship, Orientation.HORIZONTAL, coordinates);
+            this.seabattle.insertShip(shipLocation);
+        } catch (ShipAlreadyExistException e) {
+            action = new Image("imgs/water-bloc.png");
+        } catch (ShipOutOfTheBoardException e) {
+            action = new Image("imgs/water-bloc.png");
+        }
+
+        clickedImageView.setImage(action);
+    }
+
 }

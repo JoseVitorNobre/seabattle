@@ -11,6 +11,11 @@ public class Seabattle {
     private ArrayList<ArrayList<Integer>> sea;
     private ArrayList<ShipLocation> shipPositions;
 
+
+    
+
+
+    
     public Seabattle() {
         this.sea = new ArrayList<ArrayList<Integer>>();
         this.shipPositions = new ArrayList<ShipLocation>();
@@ -100,9 +105,42 @@ public class Seabattle {
         if (position == 0) {
             this.sea.get(coordinate.getX()).add(coordinate.getY(), 1);
         } else if (position == 2) {
-            this.sea.get(coordinate.getX()).add(coordinate.getY(), 3);
+            if(verifyIfShipIsStillUp(coordinate)){
+                for(int i = 0; i < this.shipPositions.size();i++){
+                    if(this.shipPositions.get(i).getCenter().equals(coordinate)){
+                        this.shipPositions.remove(i);
+                    }
+                }
+            }else{
+                this.sea.get(coordinate.getX()).add(coordinate.getY(), 3);
+            }
+
         } else {
             throw new PositionGuessedException();
         }
+    }
+
+
+    public boolean gameEnded(){
+        if(this.shipPositions.isEmpty()) return true;
+        else return false;
+    }
+
+    private boolean verifyIfShipIsStillUp(Coordinates coordinates){
+        ArrayList<Integer> shipLocations;
+        for (ShipLocation shipPosition : this.shipPositions) {
+            if(shipPosition.getCenter().equals(coordinates)){
+                shipLocations = shipPosition.getLocations();
+                int areasUp = shipLocations.size() / 2;
+                for(int i = 0; i + 1 < shipLocations.size();i+=2){
+                    if(this.sea.get(i).get(i+1) == 3){
+                        areasUp--;
+                    }
+                }
+                if(areasUp == 0) return false;
+            }
+        }
+        return true;
+
     }
 }
