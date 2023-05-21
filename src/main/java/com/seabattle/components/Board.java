@@ -402,7 +402,6 @@ public class Board {
         } catch (ShipOutOfTheBoardException e) {
         }
 
-        System.out.println(this.seabattle.getSea().get(positionX - 1).get(positionY - 1));
         if (this.seabattle.getSea().get(positionX - 1).get(positionY - 1) == 2) {
             for (ShipLocation shipLocation : this.seabattle.getShipPositions()) {
                 if (shipLocation.getCenter().equals(new Coordinates(positionX, positionY))) {
