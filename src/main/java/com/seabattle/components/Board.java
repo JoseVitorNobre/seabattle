@@ -8,8 +8,10 @@ import javax.swing.text.Position;
 import com.seabattle.Seabattle;
 import com.seabattle.exceptions.PositionGuessedException;
 import com.seabattle.locationArragment.Coordinates;
+import com.seabattle.locationArragment.ShipLocation;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Orientation;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -350,8 +352,15 @@ public class Board {
         }
 
         if (this.seabattle.getSea().get(positionX).get(positionY) == 1) {
-            ImageView imageMissShoot = new ImageView("imgs/pngwing.com.png");
-            clickedImageView = imageMissShoot;
+            for (ShipLocation shipLocation : this.seabattle.getShipPositions()) {
+                if (shipLocation.getCenter().equals(new Coordinates(positionX, positionY))) {
+                    ImageView imageMissShoot = new ImageView("imgs/Meio.png");
+                    clickedImageView = imageMissShoot;
+                } else {
+                    ImageView imageMissShoot = new ImageView("imgs/CimaBaixo.png");
+                    clickedImageView = imageMissShoot;
+                } 
+            }
         } else {
             Image imageMissShoot = new Image("imgs/pngwing.com.png");
             clickedImageView.setImage(imageMissShoot);

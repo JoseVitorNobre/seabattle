@@ -109,4 +109,8 @@ public class Seabattle {
     public ArrayList<ArrayList<Integer>> getSea() {
         return sea;
     }
+
+    public ArrayList<ShipLocation> getShipPositions() {
+        return shipPositions;
+    }
 }
