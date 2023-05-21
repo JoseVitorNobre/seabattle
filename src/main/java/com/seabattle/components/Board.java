@@ -22,11 +22,15 @@ import com.seabattle.locationArragment.ShipLocation;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Orientation;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 public class Board {
+
+    @FXML
+    private ImageView attack;
 
     @FXML
     private ImageView largeShip;
@@ -344,13 +348,12 @@ public class Board {
     private Seabattle seabattle;
 
     public Board() {
-        this.seabattle = new Seabattle();
+    this.seabattle = new Seabattle();
     }
 
     @FXML
     void chooseAction(MouseEvent event) {
         this.actionImplication = event.getPickResult().getIntersectedNode().getId();
-        // System.out.println(event.getPickResult().getIntersectedNode().getId());
     }
 
     @FXML
@@ -364,65 +367,43 @@ public class Board {
         Integer positionY = number % 10;
         if (positionY == 0)
             positionY = 10;
-        // System.out.println("X: " + positionX + " Y: "+ positionY);
-        Image action;
         try {
             IShip ship;
-            switch (actionImplication) {
-                case "tinyShip":
-                    ship = new TinyShip();
-                    action = new Image("imgs/TinyShip.png");
-                    break;
-                case "smallShip":
-                    ship = new SmallShip();
-                    action = new Image("imgs/CimaBaixo.png");
-                    break;
-                case "mediumShip":
-                    ship = new MediumShip();
-                    action = new Image("imgs/Meio.png");
-                    break;
-                case "largeShip":
-                    ship = new LargeShip();
-                    action = new Image("imgs/Meio.png");
-                    break;
-                default:
-                    ship = null;
-                    action = null;
-                    break;
+            if (actionImplication.equals("attack")) {
+                this.seabattle.attackPosition(new Coordinates(positionX, positionY));
+            } else {
+
+                switch (actionImplication) {
+                    case "tinyShip":
+                        ship = new TinyShip();
+                        System.out.println("Navio Minusculo Colocado");
+                        break;
+                    case "smallShip":
+                        ship = new SmallShip();
+                        System.out.println("Navio Pequeno Colocado");
+                        break;
+                    case "mediumShip":
+                        ship = new MediumShip();
+                        System.out.println("Navio Medio Colocado");
+                        break;
+                    case "largeShip":
+                        ship = new LargeShip();
+                        System.out.println("Navio Grande Colocado");
+                        break;
+                    default:
+                        ship = null;
+                        break;
+                }
+                Coordinates coordinates = new Coordinates(positionX, positionY);
+                ShipLocation shipLocation = new ShipLocation(ship, Orientation.HORIZONTAL, coordinates);
+                this.seabattle.insertShip(shipLocation);
             }
-            Coordinates coordinates = new Coordinates(positionX, positionY);
-            ShipLocation shipLocation = new ShipLocation(ship, Orientation.HORIZONTAL, coordinates);
-            this.seabattle.insertShip(shipLocation);
         } catch (ShipAlreadyExistException e) {
-            action = new Image("imgs/water-bloc.png");
         } catch (ShipOutOfTheBoardException e) {
-            action = new Image("imgs/water-bloc.png");
         }
 
-        clickedImageView.setImage(action);
-    }
-
-
-
-    public void attack(MouseEvent event) {
-        ImageView clickedImageView = (ImageView) event.getSource();
-        String clickedImageId = clickedImageView.getId();
-        int number = Integer.parseInt(clickedImageId.substring(10));
-
-        int positionX = ((number / 10) % 10) + 1;
-        if (positionX == 0)
-            positionX = 1;
-
-        int positionY = number % 10;
-        if (positionY == 0)
-            positionY = 10;
-
-        try {
-            this.seabattle.attackPosition(new Coordinates(positionX, positionY));
-        } catch (PositionGuessedException e) {
-        }
-
-        if (this.seabattle.getSea().get(positionX).get(positionY) == 1) {
+        System.out.println(this.seabattle.getSea().get(positionX - 1).get(positionY - 1));
+        if (this.seabattle.getSea().get(positionX - 1).get(positionY - 1) == 2) {
             for (ShipLocation shipLocation : this.seabattle.getShipPositions()) {
                 if (shipLocation.getCenter().equals(new Coordinates(positionX, positionY))) {
                     ImageView imageMissShoot = new ImageView("imgs/Meio.png");
@@ -430,13 +411,12 @@ public class Board {
                 } else {
                     ImageView imageMissShoot = new ImageView("imgs/CimaBaixo.png");
                     clickedImageView = imageMissShoot;
-                } 
+                }
             }
-        } else {
+        } else if(this.seabattle.getSea().get(positionX - 1).get(positionY - 1) == 1){
             Image imageMissShoot = new Image("imgs/pngwing.com.png");
             clickedImageView.setImage(imageMissShoot);
         }
-
-        System.out.println("posicao X: " + positionX + " posicao Y: " + positionY);
     }
+
 }
