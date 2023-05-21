@@ -1,9 +1,18 @@
 package com.seabattle.components;
 
+import java.io.Console;
 import java.util.ArrayList;
 
+import javax.swing.text.Position;
+
+import com.seabattle.Seabattle;
+import com.seabattle.exceptions.PositionGuessedException;
+import com.seabattle.locationArragment.Coordinates;
+
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 public class Board {
 
@@ -311,10 +320,45 @@ public class Board {
     private ImageView smallShip;
 
     private ArrayList<ImageView> waterBlocks;
+    private Seabattle seabattle;
 
     public Board() {
         this.waterBlocks = new ArrayList<ImageView>();
+        this.seabattle = new Seabattle();
     }
 
-    
+    public void sayHello() {
+        System.out.println("Hello");
+    }
+
+    public void attack(MouseEvent event) {
+        ImageView clickedImageView = (ImageView) event.getSource();
+        String clickedImageId = clickedImageView.getId();
+        int number = Integer.parseInt(clickedImageId.substring(10));
+
+        int positionX = ((number / 10) % 10) + 1;
+        if (positionX == 0)
+            positionX = 1;
+
+        int positionY = number % 10;
+        if (positionY == 0)
+            positionY = 10;
+
+        try {
+            this.seabattle.attackPosition(new Coordinates(positionX, positionY));
+        } catch (PositionGuessedException e) {
+        }
+
+        if (this.seabattle.getSea().get(positionX).get(positionY) == 1) {
+            System.out.println("aqui");
+            ImageView imageMissShoot = new ImageView("imgs/pngwing.com.png");
+            clickedImageView = imageMissShoot;
+        } else {
+            System.out.println("aqui2");
+            Image imageMissShoot = new Image("imgs/pngwing.com.png");
+            clickedImageView.setImage(imageMissShoot);
+        }
+
+        System.out.println("posicao X: " + positionX + " posicao Y: " + positionY);
+    }
 }

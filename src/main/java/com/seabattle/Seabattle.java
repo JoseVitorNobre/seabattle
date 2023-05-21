@@ -105,4 +105,8 @@ public class Seabattle {
             throw new PositionGuessedException();
         }
     }
+
+    public ArrayList<ArrayList<Integer>> getSea() {
+        return sea;
+    }
 }
