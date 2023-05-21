@@ -350,11 +350,9 @@ public class Board {
         }
 
         if (this.seabattle.getSea().get(positionX).get(positionY) == 1) {
-            System.out.println("aqui");
             ImageView imageMissShoot = new ImageView("imgs/pngwing.com.png");
             clickedImageView = imageMissShoot;
         } else {
-            System.out.println("aqui2");
             Image imageMissShoot = new Image("imgs/pngwing.com.png");
             clickedImageView.setImage(imageMissShoot);
         }
