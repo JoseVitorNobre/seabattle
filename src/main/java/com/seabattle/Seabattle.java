@@ -10,11 +10,6 @@ import com.seabattle.locationArragment.ShipLocation;
 public class Seabattle {
     private ArrayList<ArrayList<Integer>> sea;
     private ArrayList<ShipLocation> shipPositions;
-
-
-    
-
-
     
     public Seabattle() {
         this.sea = new ArrayList<ArrayList<Integer>>();
@@ -141,6 +136,13 @@ public class Seabattle {
             }
         }
         return true;
+    }
 
+    public ArrayList<ArrayList<Integer>> getSea() {
+        return sea;
+    }
+
+    public ArrayList<ShipLocation> getShipPositions() {
+        return shipPositions;
     }
 }

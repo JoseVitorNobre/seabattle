@@ -10,6 +10,15 @@ import com.seabattle.ships.LargeShip;
 import com.seabattle.ships.MediumShip;
 import com.seabattle.ships.SmallShip;
 import com.seabattle.ships.TinyShip;
+import java.io.Console;
+import java.util.ArrayList;
+
+import javax.swing.text.Position;
+
+import com.seabattle.Seabattle;
+import com.seabattle.exceptions.PositionGuessedException;
+import com.seabattle.locationArragment.Coordinates;
+import com.seabattle.locationArragment.ShipLocation;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Orientation;
@@ -331,9 +340,12 @@ public class Board {
     @FXML
     private ImageView waterBlock99;
 
-    private Seabattle seabattle = new Seabattle();
-
     private String actionImplication;
+    private Seabattle seabattle;
+
+    public Board() {
+        this.seabattle = new Seabattle();
+    }
 
     @FXML
     void chooseAction(MouseEvent event) {
@@ -390,4 +402,41 @@ public class Board {
         clickedImageView.setImage(action);
     }
 
+
+
+    public void attack(MouseEvent event) {
+        ImageView clickedImageView = (ImageView) event.getSource();
+        String clickedImageId = clickedImageView.getId();
+        int number = Integer.parseInt(clickedImageId.substring(10));
+
+        int positionX = ((number / 10) % 10) + 1;
+        if (positionX == 0)
+            positionX = 1;
+
+        int positionY = number % 10;
+        if (positionY == 0)
+            positionY = 10;
+
+        try {
+            this.seabattle.attackPosition(new Coordinates(positionX, positionY));
+        } catch (PositionGuessedException e) {
+        }
+
+        if (this.seabattle.getSea().get(positionX).get(positionY) == 1) {
+            for (ShipLocation shipLocation : this.seabattle.getShipPositions()) {
+                if (shipLocation.getCenter().equals(new Coordinates(positionX, positionY))) {
+                    ImageView imageMissShoot = new ImageView("imgs/Meio.png");
+                    clickedImageView = imageMissShoot;
+                } else {
+                    ImageView imageMissShoot = new ImageView("imgs/CimaBaixo.png");
+                    clickedImageView = imageMissShoot;
+                } 
+            }
+        } else {
+            Image imageMissShoot = new Image("imgs/pngwing.com.png");
+            clickedImageView.setImage(imageMissShoot);
+        }
+
+        System.out.println("posicao X: " + positionX + " posicao Y: " + positionY);
+    }
 }

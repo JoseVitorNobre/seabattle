@@ -4,7 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="648.0" prefWidth="1296.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seabattle.components.Board">
+<AnchorPane onTouchPressed="#sayHello" prefHeight="648.0" prefWidth="1296.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seabattle.components.Board">
    <children>
       <ImageView fx:id="waterBlock1" fitHeight="30.0" fitWidth="30.0" layoutX="472.0" layoutY="75.0" onMouseClicked="#action" pickOnBounds="true" preserveRatio="true">
          <image>
